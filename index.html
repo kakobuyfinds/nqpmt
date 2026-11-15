@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>LitBuy spreadsheet : baskets, vêtements et guide QC</title>
+  <meta name="description" content="Explorez 10 catégories sur HipobuyFind et utilisez ce guide LitBuy spreadsheet pour comparer les pointures, les photos QC et les frais de livraison.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="LitBuy spreadsheet : baskets, vêtements et guide QC">
+  <meta property="og:description" content="Dix catégories et des conseils pour vérifier les mesures, les photos QC et les frais avant de commander.">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #202333;
+      --muted: #514963;
+      --paper: #fbf8f2;
+      --lilac: #ece6ff;
+      --purple: #3f2869;
+      --line: #d7cde6;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 1rem/1.6 system-ui, sans-serif; }
+    a { color: var(--purple); text-underline-offset: .2em; }
+    a:focus-visible, summary:focus-visible { outline: 3px solid #622bbb; outline-offset: 4px; }
+    .wrap { width: min(72rem, calc(100% - 2rem)); margin-inline: auto; }
+    header { border-bottom: 1px solid var(--line); }
+    .top { min-height: 3.75rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .top a { font-weight: 750; }
+    section { margin-block: clamp(2.25rem, 6vw, 4.5rem); }
+    h1, h2, h3, p { margin: 0 0 .65em; }
+    h1, h2, h3 { line-height: 1.12; text-wrap: balance; }
+    h1 { font: 700 clamp(2.75rem, 7.5vw, 6rem)/.98 Georgia, serif; letter-spacing: -.045em; overflow-wrap: anywhere; }
+    h2 { font: 700 clamp(1.7rem, 4vw, 2.5rem)/1.12 Georgia, serif; }
+    h3 { font-size: 1.1rem; }
+    .hero { display: grid; grid-template-columns: 1.3fr 1fr; gap: 1rem; align-items: stretch; margin-block: 1.25rem; }
+    .hero-copy { padding: clamp(1.25rem, 4.5vw, 3.75rem); background: var(--lilac); border-radius: 1.25rem; }
+    .hero-copy p { max-width: 48ch; }
+    .cta { display: inline-block; margin-top: .65rem; padding: .7rem 1rem; border-radius: .65rem; background: var(--purple); color: white; font-weight: 700; }
+    figure { min-width: 0; margin: 0; }
+    img { display: block; width: 100%; height: auto; background: #f3eff8; }
+    .hero figure { display: grid; place-items: stretch; overflow: hidden; border-radius: 1.25rem; background: #f4f0f9; }
+    .hero img { width: 100%; height: 100%; aspect-ratio: 5 / 4; object-fit: contain; }
+    .catalogue { margin-top: 1.65rem; }
+    .tiles, .gallery, .guides { display: grid; gap: .75rem; padding: 0; margin: 0; list-style: none; }
+    .tiles { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    .tiles a { display: flex; justify-content: space-between; align-items: center; height: 100%; gap: .5rem; padding: .8rem; border: 1px solid var(--line); border-radius: .65rem; background: #fff; font-weight: 700; text-decoration: none; }
+    .tiles a:hover { background: var(--lilac); text-decoration: underline; }
+    .gallery { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .gallery figure, .guides article { background: #fff; border: 1px solid var(--line); border-radius: .85rem; overflow: hidden; }
+    .gallery img { aspect-ratio: 1; object-fit: contain; }
+    figcaption { padding: .8rem; font-weight: 700; }
+    .guides { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .guides article { padding: 1.1rem; }
+    .guides p:last-child { margin-bottom: 0; }
+    .note { color: var(--muted); }
+    details { border-top: 1px solid var(--line); padding: .75rem 0; }
+    details:last-child { border-bottom: 1px solid var(--line); }
+    summary { cursor: pointer; font-weight: 750; }
+    details p { margin: .5rem 0 0; }
+    footer { border-top: 1px solid var(--line); padding: 1.3rem 0; }
+    @media (max-width: 53rem) { .tiles { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+    @media (max-width: 40rem) {
+      .hero, .guides { grid-template-columns: 1fr; }
+      .hero img { max-height: 16rem; }
+      .tiles, .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "inLanguage": "fr",
+    "name": "LitBuy spreadsheet : baskets, vêtements et guide QC",
+    "description": "Guide en français pour parcourir les catégories HipobuyFind, lire les mesures, examiner les photos QC et comparer les frais de livraison.",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Qu’est-ce qu’un LitBuy spreadsheet ?",
+        "acceptedAnswer": {"@type":"Answer","text":"C’est une liste de repérage qui rassemble des liens vers des articles. Cette page est un guide indépendant. Les liens de catégories ouvrent le catalogue HipobuyFind."}
+      },
+      {
+        "@type":"Question",
+        "name":"Comment savoir si un lien fonctionne avec LitBuy ?",
+        "acceptedAnswer":{"@type":"Answer","text":"Testez l’URL de la fiche d’origine dans l’outil de recherche de votre agent. Comparez la référence et les variantes affichées avant de commander."}
+      },
+      {
+        "@type":"Question",
+        "name":"Les photos QC prouvent-elles l’authenticité ?",
+        "acceptedAnswer":{"@type":"Answer","text":"Les photos QC servent à examiner l’état visible et la variante préparée. Pour vérifier l’authenticité, demandez une preuve de provenance et privilégiez un revendeur agréé."}
+      },
+      {
+        "@type":"Question",
+        "name":"Comment estimer une livraison vers la France ?",
+        "acceptedAnswer":{"@type":"Answer","text":"Renseignez le pays, le poids et les dimensions du colis dans le calculateur de l’agent. Comparez les lignes disponibles et vérifiez si les taxes et les frais de dossier sont inclus."}
+      }
+    ]
+  }
+  </script>
+<link rel="canonical" href="https://kakobuyfinds.github.io/nqpmt/">
+</head>
+<body>
+  <header>
+    <div class="wrap top">
+      <span>Guide d’achat indépendant</span>
+      <a href="https://www.hipobuyfind.com">HipobuyFind ↗</a>
+    </div>
+  </header>
+  <main class="wrap">
+    <section class="hero" aria-labelledby="titre">
+      <div class="hero-copy">
+        <h1 id="titre">LitBuy spreadsheet</h1>
+        <p>Un <strong>LitBuy spreadsheet</strong> est une liste qui regroupe des liens vers des articles pour faciliter la comparaison. Explorez le catalogue HipobuyFind, puis utilisez ce guide pour vérifier la variante, lire les mesures et estimer le budget livré.</p>
+        <a class="cta" href="https://www.hipobuyfind.com">Ouvrir le catalogue HipobuyFind</a>
+      </div>
+      <figure>
+        <img src="https://www.tike.gr/files/images/products/media/CW2/CW2288-111/images/CW2288-111.jpg.webp" width="640" height="512" alt="Basket blanche Nike Air Force 1 ’07, vue de profil" fetchpriority="high" loading="eager">
+      </figure>
+    </section>
+
+    <section class="catalogue" aria-labelledby="categories">
+      <h2 id="categories">Parcourir les catégories</h2>
+      <nav aria-labelledby="categories">
+        <ul class="tiles">
+          <li><a href="https://hipobuyfind.com/category-911-Shoes.html">Chaussures <span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://hipobuyfind.com/category-912-Hoodies%2FSweaters.html">Sweats et pulls <span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://hipobuyfind.com/category-913-T-Shirts.html">T-shirts <span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://hipobuyfind.com/category-914-Jackets.html">Vestes <span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://hipobuyfind.com/category-915-Pants%2FShorts.html">Pantalons et shorts <span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://hipobuyfind.com/category-916-Headwear.html">Casquettes et bonnets <span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://hipobuyfind.com/category-917-Sets.html">Ensembles <span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://hipobuyfind.com/category-918-underwear%2Funderpants.html">Sous-vêtements <span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://hipobuyfind.com/category-919-Jersey.html">Maillots <span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://hipobuyfind.com/category-920-Accessories.html">Accessoires <span aria-hidden="true">↗</span></a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <section aria-labelledby="modeles">
+      <h2 id="modeles">Vestes, casquettes et bijoux en images</h2>
+      <p class="note">Ces photos illustrent des modèles de marque. Consultez le catalogue pour connaître les articles proposés.</p>
+      <div class="gallery">
+        <figure>
+          <img src="https://nz.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-monogram-denim-jacket--FVJA29EFY610_PM2_Front%20view.jpg?wid=480" width="480" height="480" alt="Veste Louis Vuitton en denim bleu à motif Monogram" loading="lazy" decoding="async">
+          <figcaption>Louis Vuitton · veste Monogram</figcaption>
+        </figure>
+        <figure>
+          <img src="https://media.gucci.com/style/HEXFBFBFB_South_0_160_640x640/1751298339/838745_3HBC4_2600_001_100_0000_Light.jpg" width="640" height="640" alt="Casquette Gucci en toile GG beige et marron" loading="lazy" decoding="async">
+          <figcaption>Gucci · casquette en toile GG</figcaption>
+        </figure>
+        <figure>
+          <img src="https://assets.hermes.com/is/image/hermesproduct/bracelet-clic-h--700001F%204P-front-1-300-0-1000-1000_b.jpg?wid=480" width="480" height="480" alt="Bracelet Hermès Clic H en émail avec fermoir en H" loading="lazy" decoding="async">
+          <figcaption>Hermès · bracelet Clic H</figcaption>
+        </figure>
+        <figure>
+          <img src="https://assets.christiandior.com/is/image/diorprod/E0078MIDRSD301_SBG_E01-1?%24r9x10_raw%24=&amp;crop=0%2C0%2C4000%2C5000&amp;hei=540&amp;wid=480" width="480" height="540" alt="Boucles d’oreilles Dior Tribales à perles de résine blanche" loading="lazy" decoding="async">
+          <figcaption>Dior · boucles d’oreilles Tribales</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section aria-labelledby="guide">
+      <h2 id="guide">Guide LitBuy pour comparer avant de commander</h2>
+      <div class="guides">
+        <article>
+          <h3>Baskets et vêtements : choisir la taille</h3>
+          <p>Pour des baskets Nike, mesurez la longueur du pied en centimètres et consultez le tableau des pointures du modèle. La longueur de la semelle intérieure et la longueur du pied sont deux mesures distinctes.</p>
+          <p>Pour un sweat à capuche ou une veste en jean, mesurez à plat un vêtement qui vous va. Comparez la largeur sous les aisselles, la longueur totale et celle des manches. Pour une casquette ajustable ou un bracelet rigide, vérifiez le tour de tête ou de poignet.</p>
+        </article>
+        <article>
+          <h3>Photos QC : regarder les détails</h3>
+          <p>Une photo QC est une image de contrôle prise sur l’article reçu en entrepôt. Comparez la couleur, la taille et la référence à celles de la fiche produit. Pour une chaussure, demandez une vue de la semelle et de l’étiquette intérieure. Pour un bijou, examinez le fermoir et la finition.</p>
+          <p>Si la mesure ou la variante reçue pose problème, vérifiez le délai de retour vendeur et demandez une photo avec un mètre avant l’expédition.</p>
+        </article>
+        <article>
+          <h3>Livraison depuis la Chine : calculer le total</h3>
+          <p>Additionnez le prix de l’article, l’envoi jusqu’à l’entrepôt, les frais de service et le transport international. Selon la ligne, la facturation peut dépendre du poids réel ou du poids volumétrique du colis.</p>
+          <p>Pour comparer deux offres livrées en France, en Belgique ou en Suisse, utilisez la même devise et vérifiez les taxes éventuelles, les frais de dossier et le suivi. Gardez la référence du vendeur pour retrouver la même variante si un lien expire.</p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="faq">
+      <h2 id="faq">Questions fréquentes</h2>
+      <details open>
+        <summary>Qu’est-ce qu’un LitBuy spreadsheet ?</summary>
+        <p>C’est une liste de repérage qui rassemble des liens vers des articles. Cette page est un guide indépendant. Les liens de catégories ouvrent le catalogue HipobuyFind.</p>
+      </details>
+      <details open>
+        <summary>Comment savoir si un lien fonctionne avec LitBuy ?</summary>
+        <p>Testez l’URL de la fiche d’origine dans l’outil de recherche de votre agent. Comparez la référence et les variantes affichées avant de commander.</p>
+      </details>
+      <details open>
+        <summary>Les photos QC prouvent-elles l’authenticité ?</summary>
+        <p>Les photos QC servent à examiner l’état visible et la variante préparée. Pour vérifier l’authenticité, demandez une preuve de provenance et privilégiez un revendeur agréé.</p>
+      </details>
+      <details open>
+        <summary>Comment estimer une livraison vers la France ?</summary>
+        <p>Renseignez le pays, le poids et les dimensions du colis dans le calculateur de l’agent. Comparez les lignes disponibles et vérifiez si les taxes et les frais de dossier sont inclus.</p>
+      </details>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap"><a href="https://www.hipobuyfind.com">Consulter HipobuyFind</a></div>
+  </footer>
+</body>
+</html>
